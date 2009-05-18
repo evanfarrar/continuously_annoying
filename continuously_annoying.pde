@@ -1,6 +1,5 @@
 #define wootPin 12      // the pin that the LED is attached to
 int incomingByte;      // a variable to read incoming serial data into
-int lightState = LOW;
 
 void setup() {
   // initialize serial communication:
@@ -10,12 +9,13 @@ void setup() {
 }
 
 void loop() {
-  // see if there's incoming serial data:
   if (Serial.available() > 0) {
-    // if it's a capital L, toggle the Light:
-    if (Serial.read() == 'L') {
-      lightState = !lightState;
-      digitalWrite(wootPin, lightState);
-    } 
+    incomingByte = Serial.read();
+    if (incomingByte == 'g') {
+      digitalWrite(wootPin, HIGH);
+    }
+    if (incomingByte == 's') {
+      digitalWrite(wootPin, LOW);
+    }
   }
 }
