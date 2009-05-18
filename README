@@ -12,4 +12,4 @@ Ingredients:
   -10K resistor
   -wires, solder, whathaveyou
 
-Slice open your lamp, connect the + to +5v on the arduino, connect the - to the collector on the transistor. Then connect pin 12 of the arduino to the base pin, and ground to the emitter. Last, bridge the emitter and base with the 10k resistor. Flash the arduino firmware and set up the ruby script to run with cron. TADA!
+Slice open your lamp, connect the + to +5v on the arduino, connect the - to the collector on the transistor. Then connect pin 12 of the arduino to the base pin, and ground to the emitter. Last, bridge the emitter and base with the 10k resistor. Flash the arduino firmware and set up the ruby script to run in the background. TADA!
