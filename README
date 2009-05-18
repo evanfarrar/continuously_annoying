@@ -1,0 +1,15 @@
+This is like, a couple of lines that annoy your coworkers when the build is broken.
+
+It is a symphony in three movements
+  - A piece of hardware
+  - An arduino sketch
+  - A ruby script to glue it all together
+
+Ingredients:
+  -USB powered lamp
+  -NPN Transistor
+  -Arduino
+  -10K resistor
+  -wires, solder, whathaveyou
+
+Slice open your lamp, connect the + to +5v on the arduino, connect the - to the collector on the transistor. Then connect pin 12 of the arduino to the base pin, and ground to the emitter. Last, bridge the emitter and base with the 10k resistor. Flash the arduino firmware and set up the ruby script to run with cron. TADA!
